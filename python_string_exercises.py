@@ -120,6 +120,65 @@ def get_first_middle_last_character_from_string(s1, s2):
 get_first_middle_last_character_from_string("America", "Japan")
 
 
+#Arrange string characters such that lowercase letters should come first
+
+def lowercase_letter_come_first(str1):
+    print("original word: ", str1)
+    lower = []
+    upper = []
+    for char in str1:
+        if char.islower():
+            #add lowercase character to string
+            lower.append(char)
+        else:
+            upper.append(char)
+    sorted_str = ''.join(lower+upper)
+    print("sorted string: ", sorted_str)
+
+lowercase_letter_come_first("PYnAtive")
+
+##Arrange string characters such that uppercase letters should come first
+
+def get_uppercase_letter_first(str1):
+    print("Original String: ", str1)
+    lowercase = []
+    uppercase = []
+    for char in str1:
+        if char.islower():
+            lowercase.append(char)
+        else:
+            uppercase.append(char)
+    result = ''.join(uppercase+lowercase)
+    print("result string: ", result)
+get_uppercase_letter_first("pyNatiVE")
+
+
+def change_into_uppercase(str1):
+    print("original string: ",str1)
+    result = str1.upper()
+    print("result; ",result)
+
+change_into_uppercase("hello")
+
+#Count all letters, digits, and special symbols from a given string
+def count_all_letter_digit_and_symbols(str1):
+  print("Original string: ", str1)
+  char_count = 0
+  digit_count = 0
+  symbol_count = 0
+  for char in str1:
+      if char.isalpha():
+          char_count += 1
+      elif char.isdigit():
+          digit_count += 1
+      else:
+          symbol_count +=1
+  print("Chars =", char_count, "Digits =", digit_count, "Symbol =", symbol_count)
+
+print("total counts of chars, digits, and symbols\n")
+count_all_letter_digit_and_symbols("P@yn2at&#i5ve")
+
+
 
 
 
