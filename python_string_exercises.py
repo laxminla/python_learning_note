@@ -179,6 +179,33 @@ print("total counts of chars, digits, and symbols\n")
 count_all_letter_digit_and_symbols("P@yn2at&#i5ve")
 
 
+#Exercise 11: Reverse a given string
+def reverse_string(str1):
+    print("original string: ", str1)
+    res = str1[::-1]
+    print("reversed string: ",res)
+
+reverse_string("PYnative")
+
+#Exercise 13: Split a string on hyphens
+#Write a program to split a given string on hyphens and display each substring.
+def display_each_substring(hypenstr):
+    print("Original string: ", hypenstr)
+    res = hypenstr.split("-")
+    print("Displaying each substrings")
+    for sub in res:
+        print(sub)
+display_each_substring("Emma-is-a-data-scientist")
+
+#another way to do it without function
+str1 = "Hello_Python_string_function"
+print("Original string:", str1)
+sub_string = str1.split("_")
+print("Displaying new substring")
+for i in sub_string:
+    print(i)
+
+
 
 
 
