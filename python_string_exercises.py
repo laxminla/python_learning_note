@@ -206,6 +206,22 @@ for i in sub_string:
     print(i)
 
 
+#Remove empty strings from a list of strings
+str_list = ["Emma", "Jon", "", "Kelly", None, "Eric", ""]
+res_list = []
+for s in str_list:
+    if s:
+        res_list.append(s)
+    print(res_list)
+
+#alternate solution
+str_list = ["Emma", "Jon", "", "Kelly", None, "Eric", ""]
+new_str_list = list(filter(None, str_list))
+print("after removing empty strings")
+print(new_str_list)
+
+
+
 
 
 
